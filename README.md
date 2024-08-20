@@ -1,5 +1,5 @@
 # WebUI for WebLink
-Vanila JS and a little Sass. Fonts are included so WebLink could be runned offline.
+Vanilla JS and a little Sass. Fonts are included so WebLink could be runned offline.
 
 # Usage
 
