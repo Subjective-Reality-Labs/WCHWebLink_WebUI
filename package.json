@@ -1,0 +1,24 @@
+{
+  "name": "wch-weblink-ui",
+  "source": "index.html",
+  "targets": {
+    "default": {
+      "distDir": "./data/www",
+      "sourceMap": false
+    },
+    "submodule": {
+      "distDir": "../data/www",
+      "sourceMap": false
+    }
+  },
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build --target default",
+    "build-submodule": "parcel build --target submodule"
+  },
+  "dependencies": {
+    "@parcel/transformer-sass": "^2.12.0",
+    "parcel": "^2.12.0",
+    "parcel-namer-sorter": "^0.1.8"
+  }
+}

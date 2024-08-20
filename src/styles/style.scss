@@ -1,0 +1,59 @@
+@mixin flex($dir: row, $just: flex-start, $align: center) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $just;
+  align-items: $align;
+}
+@mixin dotAnim($label, $duration: 3s) {
+  $name: anim-#{unique-id()};
+  
+  animation: $name $duration steps(5, end) infinite;
+  
+  @keyframes #{$name} {
+    0%, 20% {
+        content: "#{$label}";
+    }
+      40% {
+        content: "#{$label}.";
+    }
+      60% {
+        content: "#{$label}..";
+    }
+      80%, 100% {
+        content: "#{$label}...";
+    }
+  }
+}
+
+@mixin border ($color: black) {
+  border: 0.5rem solid $color;
+}
+@mixin shadow($dir, $color) {
+  @if $dir == right {
+    box-shadow: 0.5rem 0.5rem 0 $color;
+  } @else {
+    box-shadow: -0.5rem 0.5rem 0 $color;
+  } 
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2");
+}
+
+@import "main";
+@import "settings";
+@import "mobile";
+@import "custom-select";
+@import "popup";

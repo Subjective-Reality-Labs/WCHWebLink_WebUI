@@ -1,0 +1,20 @@
+@media screen and (max-width: 480px) {
+  .settings {
+    width: calc(100vw - 7rem); 
+    left: 6rem;
+  }
+  .updater {
+    width: calc(100vw - 2rem);
+    left: 1rem;
+  }
+  .terminal {
+    height: 85%;
+  }
+  .about-popup {
+    margin: 0;
+    p,a {
+      margin-bottom: 2rem;
+      font-size: 2rem !important;
+    }
+  }
+}
